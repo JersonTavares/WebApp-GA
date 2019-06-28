@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Gestao de Auditoria</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" \
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>Gestao de Auditoria</h1><br>
+    <ul class="nav justify-content-end nav-tabs nav-pills">
+      <li class="nav-item">
+        <a class="nav-link active" href="mainpage">Gestao de Auditoria</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/index">Logout</a>
+      </li>
+    </ul>
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link" href="/mainpage">Listar</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/mainpage/addAuditoria">Registar Auditoria</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Atualizar</a>
+      </li>
+    </ul><br>
+    <h6>Add an Auditoria</h6>
+    <form method="post" action="/addAuditoria">
+      <div class="form-group">
+        <label for="id">ID</label>
+        <input id="id" name="id" class="form-control" required="required" type="number"/>
+      </div>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input id="name" name="name" class="form-control" required="required" type="text" />
+      </div>
+      <div class="form-group">
+        <label for="stdate">stdate</label>
+        <input id="stdate" name="stdate" class="form-control" required="required" type="text" />
+      </div>
+      <div class="form-group">
+        <label for="endate">endate</label>
+        <input id="endate" name="endate" class="form-control" required="required" type="text"/>
+      </div>
+      <div class="form-group">
+        <label for="description">description</label>
+        <input id="description" name="description" class="form-control" required="required" type="text" />
+      </div>
+      <div class="form-group">
+        <input type="submit" class="btn btn-primary" value="Add" />
+      </div>
+    </form>
+  </body>
+</html>

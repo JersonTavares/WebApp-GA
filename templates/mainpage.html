@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Gestao de Auditoria</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" \
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>Gestao de Auditoria</h1><br>
+    <ul class="nav justify-content-end nav-tabs nav-pills">
+      <li class="nav-item">
+        <a class="nav-link active" href="/mainpage">Gestao de Auditorias</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/index">Logout</a>
+      </li>
+    </ul>
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" href="/mainpage">Listar</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/mainpage/addAuditoria">Registar Auditoria</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Atualizar</a>
+      </li>
+    </ul><br>
+    <h6>Lista de Auditorias</h6>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Start Date</th>
+          <th scope="col">End Date</th>
+          <th scope="col">Description</th>
+          <th scope="col">Auditor</th>
+        </tr>
+      </thead>
+        {% for row in rows %}
+        <tr>
+          <td>{{row["ID"]}}</td>
+          <td>{{row["NAME"]}}</td>
+          <td> {{ row["STDATE"]}}</td>
+          <td>{{row['ENDATE']}}</td>
+          <td>{{row['DESCRIPTION']}}</td>
+          <td>{{row['AUDITOR']}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+  </body>
+</html>
